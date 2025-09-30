@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Not Defteri</title>
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">Not Defteri</h1>
+
+    <div class="card form-card">
+      <h2>Yeni Not Ekle</h2>
+      <form id="note-form">
+        <div class="input-group">
+          <label for="note-title">Başlık</label>
+          <input type="text" id="note-title" placeholder="Başlık girin" maxlength="50" required>
+        </div>
+        <div class="input-group">
+          <label for="note-content">İçerik</label>
+          <textarea id="note-content" placeholder="İçerik girin" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="btn save-btn">Notu Kaydet</button>
+      </form>
+    </div>
+
+    <div class="card">
+      <div class="list-header">
+        <h2>Notlar</h2>
+        <button id="clear-all-button" class="btn clear-btn" disabled>Tüm Notları Sil</button>
+      </div>
+
+      <div id="notes-list" class="notes-grid"></div>
+      <p id="empty-message" class="empty-message">Not yok, not ekleyiniz.</p>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
